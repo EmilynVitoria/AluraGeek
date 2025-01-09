@@ -2,6 +2,9 @@
 
 Este projeto é uma loja virtual de produtos geek, desenvolvida como parte do curso da Alura.
 
+#Screenshots
+![image](https://github.com/user-attachments/assets/7bd7f4e0-d9fa-4923-90aa-b4cad8c39fce)
+
 ## Funcionalidades
 
 *   Listagem de produtos com imagem, nome e preço.
