@@ -1,0 +1,64 @@
+{
+  "produtos": [
+    {
+      "id": "ee",
+      "nome": "Mini-jinx",
+      "valor": "100",
+      "imagem": "./img/mini-jinx.jpg"
+    },
+    {
+      "id": "ed33",
+      "nome": "Jogo de cama Gamer",
+      "valor": "500",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_697612-MLB74502656282_022024-O.webp"
+    },
+    {
+      "id": "jeu4",
+      "nome": "Maquiagem LOL",
+      "valor": "100",
+      "imagem": "./img/make-lol.jpg"
+    },
+    {
+      "nome": "Cadeira Gamer Rosa",
+      "valor": 100,
+      "imagem": "./img/cadeira-gamer.jpg",
+      "id": 1
+    },
+    {
+      "nome": "Hadset Rosa",
+      "valor": 300,
+      "imagem": "./img/hadset.jpg",
+      "id": 2
+    },
+    {
+      "nome": "Mouse Gamer",
+      "valor": 200,
+      "imagem": "./img/mouse-gamer.jpg",
+      "id": 3
+    },
+    {
+      "nome": "Notebook XT5",
+      "valor": 1320,
+      "imagem": "./img/notebook.jpg",
+      "id": 4
+    },
+    {
+      "nome": "PlayStation 2",
+      "valor": "500",
+      "imagem": "./img/playstation.jpg",
+      "id": 5
+    },
+    {
+      "nome": "PlayStation 5",
+      "valor": "3500",
+      "imagem": "./img/ps5-rosa.webp",
+      "id": 6
+    },
+    {
+      "nome": "Kit Gamer Completo",
+      "valor": 1000,
+      "imagem": "./img/kit-gamer.webp",
+      "id": 7
+    }
+  ]
+}

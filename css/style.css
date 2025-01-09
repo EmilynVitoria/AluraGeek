@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Silkscreen:wght@400;700&display=swap');
+
+:root {
+    --color-hover: #F62DAE;
+    --text-color: #fff;
+    --bg-color-01: #C0C999;
+    --bg-color-02: #08090A;
+    --color-00: #470063;
+    --color-01: #B30089;
+    --color-02: #FD96A9;
+
+    --fonte-principal:  "Silkscreen", serif;
+    --fonte-02: "Pacifico", serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color-01);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--color-02);
+    color: var(--text-color);
+    padding: 20px;
+    font-size: 34px;
+    display: flex; /* Torna o container um flexbox */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .container {
+    display: flex; /* Torna o container interno um flexbox */
+    align-items: center; /* Centraliza os itens verticalmente dentro do container */
+  }
+
+  .icone {
+    width: auto;
+    height: auto;
+    margin-left: 5px;
+}
+
+.conteudo-principal {
+    display: grid;
+    grid-template-areas:
+        "titulo formulario"
+        "produtos formulario";
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+    align-items: start;
+}
+
+.produtos-section,
+.produtos-section h2 {
+    grid-area: titulo;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.lista-produtos {
+    grid-area: produtos;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+
+.produto {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--color-02);
+}
+
+.produto img {
+    max-width: 100%;
+    height: auto;
+    display: grid;
+    margin-bottom: 10px;
+    flex-grow: 1;
+    object-fit: contain;
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 10px var(--color-hover);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.produto.removendo {
+    animation: fadeOut 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; transform: scale(1);}
+    to { opacity: 0; transform: scale(0.8);}
+}
+
+.produto-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.delete-btn,
+.delete-btn img {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 5px;
+    width: 20px;
+    height: auto;
+}
+
+.delete-btn:hover {
+    transform: scale(1.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.produtos-container {
+    height: 500px; /* Defina a altura desejada para o contêiner dos produtos */
+    overflow-y: auto; /* Adiciona a barra de rolagem vertical quando o conteúdo excede a altura */
+    padding: 10px; /* Adiciona um preenchimento interno (opcional) */
+    
+}
+
+.produtos-container {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-01) var(--text-color);
+}
+
+.formulario {
+    grid-area: formulario;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) { /* 768px é um breakpoint comum para tablets/celulares */
+    .conteudo-principal {
+        grid-template-areas:
+            "formulario" /* O formulário ocupa a primeira linha */
+            "titulo"
+            "produtos"; /* Os produtos ocupam a linha seguinte */
+        grid-template-columns: 1fr; /* Apenas uma coluna em telas menores */
+        grid-gap: 30px; /* Aumenta o espaçamento entre os elementos */
+    }
+}
+
+.formulario h2 {
+    margin-bottom: 40px;
+    font-family: var(--fonte-principal);
+    font-size: 1.5rem;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    margin-bottom: 35px;
+}
+
+.input-box input {
+    padding: 10px;
+    border-radius: 100px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1.1em;
+}
+
+.botoes-formulario {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+   
+}
+
+.botoes-formulario button:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 2px 5px var(--color-hover);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.botoes-formulario button {
+    padding: 12px 25px;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: var(--fonte-principal);
+}
+
+.botoes-formulario button[type="submit"] {
+    background-color: var(--color-02);
+    color: var(--text-color);
+}
+
+.botoes-formulario button[type="submit"] {
+    position: relative;
+    overflow: hidden;
+}
+
+.botoes-formulario button[type="submit"]:disabled {
+    cursor: default;
+}
+
+.botoes-formulario button[type="submit"]:disabled::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid var(--text-color);
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+    box-sizing: border-box;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.botoes-formulario button[type="reset"] {
+    background-color: var(--text-color);
+    color: var(--color-02);
+}
+
+
+.mensagem { /* Estilo comum para ambas as mensagens */
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    display: none; /* Inicialmente ocultas */
+}
+
+.mensagem.sucesso { /* Estilo específico para mensagens de sucesso */
+    color: var(--color-00);
+    background-color: var(--color-02); 
+}
+
+.mensagem.erro { /* Estilo específico para mensagens de erro */
+    color: var(--color-00);
+}
+
+footer {
+    background-color: var(--color-02);
+    color: var(--text-color);
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo__texto,
+.logo__texto span {
+    display:flex;
+    align-items: center;
+    margin-bottom: 0px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.icone {
+    width: auto;
+    height: auto;
+    margin-left: 5px;
+}
+
+.creditos p {
+    font-size: 16px;
+    margin: 2px 0;
+    font-weight: lighter;
+}
+
+
+  

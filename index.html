@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AluraGeek</title>
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  
+  <body>
+    <header>
+      <div class="container">
+        <img src="./img/logo coração.png" alt="Coração" class="icone">
+        <span>AluraGeek</span>
+      </div>
+    </header>
+    
+    <main class="conteudo-principal">
+      <section class="produtos-section">
+        <h2>Meus <strong>produtos:</strong></h2>
+        <div class="produtos-container">
+          <ul class="lista-produtos" alt="Produtos Alura" data-lista></ul>
+        </div>
+      </section>
+
+      <section class="formulario">
+        <h2>Adicionar Produto:</h2>
+        <div id="mensagem-sucesso" class="mensagem sucesso"></div>
+        <div id="mensagem-erro" class="mensagem erro"></div>
+        <form action="" data-formulario>
+            <div class="input-box">
+                <input type="text" placeholder="nome do produto" data-nome>
+                <input type="text" placeholder="valor" data-valor>
+                <input type="text" placeholder="imagem url" data-imagem>
+            </div>
+            <div class="botoes-formulario">
+                <button class="btn-adc" type="submit" data-guardar>Adicionar</button>
+                <button class="btn-limpar" type="reset" data-limpar>Limpar</button>
+            </div>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div class="rodape">
+        <div class="logo__texto">
+          <img src="./img/logo coração.png" alt="Coração" class="icone">
+          <span>AluraGeek</span>
+        </div>
+        <div class="creditos">
+          <p>Desenvolvido por Emilyn Santos</p>
+          <p>Alura 2024</p>
+        </div>
+      </div>
+    </footer>
+
+   
+    <script type="module" src="./js/mostrarProdutos.js"></script>
+    <script type="module" src="./js/criarProduto.js"></script>
+  </body>
+</html>
